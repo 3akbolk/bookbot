@@ -1,9 +1,18 @@
-from stats import get_book_text
+from stats import count_letters
+from stats import count_words
 
-def main():
-    word_count = get_book_text("/home/zakbolk/workspace/bookbot/books/frankenstein.txt")
+seperated_words = []
+def test1():
+    word_count = count_words("/home/zakbolk/workspace/bookbot/books/frankenstein.txt")
     print(f"Found {word_count} total words.")
+    
+    
 
+    
+def test2():
+    words = ("/home/zakbolk/workspace/bookbot/books/frankenstein.txt")
+    count_letters(words)
 
-main()
+test1()
+test2()
 
