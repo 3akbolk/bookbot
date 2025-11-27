@@ -14,17 +14,16 @@ def count_letters(words):
     with open(words) as input:
         file_contents = input.read()
     word = file_contents.lower()
-    #do I need this line?? vvvv
-    letters = word.split()
+    
     #reads and splits the words in frankenstein
     sorted_letters = {}
-    each_letters = list(word)
+    letters = list(word)
     #sorts and adds to sorted_letters dictionary
-    for each_letter in each_letters:
-        if each_letter in sorted_letters:
-            sorted_letters[each_letter] += 1
+    for letter in letters:
+        if letter in sorted_letters:
+            sorted_letters[letter] += 1
         else:
-            sorted_letters[each_letter] = 1
+            sorted_letters[letter] = 1
     #return (sorted_letters)
 
     
