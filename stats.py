@@ -26,6 +26,22 @@ def count_letters(words):
             sorted_letters[each_letter] = 1
     print(sorted_letters)
 
+sorted_letters = {}
+for sorted_letter in sorted_letters:
+    for character, value in sorted_letters:
+    sorted_letters.append()
+
+dictionary = []
+
+def list_maker():
+    for character, value in sorted_letters:
 
 
+
+
+        #dictionary.append({"character": character, "value": value})
+
+
+def sort_by(charater):
+    return character[""] 
 
