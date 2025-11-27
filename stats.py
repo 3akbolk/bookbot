@@ -8,40 +8,34 @@ def count_words(path):
     
 
 
-
+dictionary = {}
 
 def count_letters(words):
     with open(words) as input:
         file_contents = input.read()
     word = file_contents.lower()
+    #do I need this line?? vvvv
     letters = word.split()
-    #print(letters)
+    #reads and splits the words in frankenstein
     sorted_letters = {}
     each_letters = list(word)
-    #print(each_letters)
+    #sorts and adds to sorted_letters dictionary
     for each_letter in each_letters:
         if each_letter in sorted_letters:
             sorted_letters[each_letter] += 1
         else:
             sorted_letters[each_letter] = 1
-    print(sorted_letters)
+    #return (sorted_letters)
 
-sorted_letters = {}
-for sorted_letter in sorted_letters:
-    for character, value in sorted_letters:
-    sorted_letters.append()
-
-dictionary = []
-
-def list_maker():
-    for character, value in sorted_letters:
+    
+    
+    for character, value in sorted_letters.items():
+        dictionary[character] = value
+    return (dictionary)
 
 
 
 
-        #dictionary.append({"character": character, "value": value})
 
 
-def sort_by(charater):
-    return character[""] 
 
