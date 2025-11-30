@@ -8,13 +8,12 @@ def count_words(path):
     
 
 
-dictionary = {}
+
 
 def count_letters(words):
     with open(words) as input:
         file_contents = input.read()
     word = file_contents.lower()
-    
     #reads and splits the words in frankenstein
     sorted_letters = {}
     letters = list(word)
@@ -24,14 +23,26 @@ def count_letters(words):
             sorted_letters[letter] += 1
         else:
             sorted_letters[letter] = 1
-    #return (sorted_letters)
+    
+    results = []
+    def sort_by(items):
+        return items["num"]
+    for letter, number in sorted_letters.items():
+        results.append({"character":letter, "num":number})
+    
+    results.sort(reverse=True, key=sort_by)
+    finals = []
+    for result in results:
+        if not result["character"].isalpha():
+            continue
+        else:
+            finals.append(f"{result['character']}: {result['num']}")
+    #for final in finals:
+    return(finals)
+    
+
 
     
-    
-    for character, value in sorted_letters.items():
-        dictionary[character] = value
-    return (dictionary)
-
 
 
 
