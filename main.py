@@ -12,11 +12,17 @@ def test1():
     
 def test2():
     words = ("/home/zakbolk/workspace/bookbot/books/frankenstein.txt")
-    count_letters(words)
     seperated_words = count_letters(words)
-    print(seperated_words)
+    for char in seperated_words:
+        print(char)
 
 
+print("============ BOOKBOT ============")
+print("Analyzing book found at books/frankenstein.txt...")
+print("----------- Word Count ----------")
 test1()
+
+print("--------- Character Count -------")
 test2()
+print("============= END ===============")
 
